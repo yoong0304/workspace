@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration:none;
+            color: #333;
+        }
+
+        #gnb {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 100px auto 0;
+        }
+
+        .main > li{
+            width: 160px;
+            height: 40px;
+            background: skyblue;
+            text-align: center;
+        }
+        .main > li > a {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 40px;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .main > li:hover {
+            background: blue;
+        }
+        li:hover .sub {
+            display: block;
+        }
+        
+        .sub {
+            position: absolute;
+            left: 160px;
+            display: none;
+            background: rgba(135, 207, 235, 0.5);   
+        }
+        .sub > li {
+            width: 160px;
+            height: 40px;
+        }
+        .sub1 {
+            top: 0;
+        }
+        .sub2 {
+            top: 40px;
+        }
+        .sub3 {
+            top: 80px;
+        }
+        .sub4 {
+            top: 120px;
+        }
+        .sub a {
+            line-height: 30px;
+            padding: 4px 8px;
+            font-size: 1.4rem;
+        }
+        .sub li:hover {
+            background: skyblue;
+        }
+        .sub a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav id="gnb">
+        <ul class="main">
+            <li>
+                <a href="#">회사소개</a>
+                <ul class="sub sub1">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">제품소개</a>
+                <ul class="sub sub2">
+                    <li><a href="#">서브메뉴11</a></li>
+                    <li><a href="#">서브메뉴22</a></li>
+                    <li><a href="#">서브메뉴33</a></li>
+                    <li><a href="#">서브메뉴44</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub sub3">
+                    <li><a href="#">서브메뉴111</a></li>
+                    <li><a href="#">서브메뉴222</a></li>
+                    <li><a href="#">서브메뉴333</a></li>
+                    <li><a href="#">서브메뉴444</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">다운로드</a>
+                <ul class="sub sub4">
+                    <li><a href="#">서브메뉴1111</a></li>
+                    <li><a href="#">서브메뉴2222</a></li>
+                    <li><a href="#">서브메뉴3333</a></li>
+                    <li><a href="#">서브메뉴4444</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            width: 500px;
+            height: 150px;
+            margin: 100px auto 0;
+            border: 1px solid #000;
+        }
+        div > ul {
+            position: relative;
+            display: flex;
+            text-align: center;
+        }
+        div > ul > li{
+            width: 100%;
+        }
+        div > ul > li > a {
+            display: block;
+            width: 100%;
+            background: #ccc;
+            font-size: 18px;
+            padding: 8px 0;
+        }
+        div > ul > li ul {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            display: none;
+        }
+        .text1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#">메뉴1</a>
+                <ul class="text text1">
+                    <li>메뉴1 내용1입니다.</li>
+                    <li>메뉴1 내용2입니다.</li>
+                    <li>메뉴1 내용3입니다.</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴2</a>
+                <ul class="text">
+                    <li>메뉴2 내용1입니다.</li>
+                    <li>메뉴2 내용2입니다.</li>
+                    <li>메뉴2 내용3입니다.</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴3</a>
+                <ul class="text">
+                    <li>메뉴3 내용1입니다.</li>
+                    <li>메뉴3 내용2입니다.</li>
+                    <li>메뉴3 내용3입니다.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $('.container > ul > li').click(function(){
+            $('.text').css({display: 'none'});
+            $(this).find('.text').css({display: 'block'});
+        })
+        
+    </script>
+</body>
+
+</html>

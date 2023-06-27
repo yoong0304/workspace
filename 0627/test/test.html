@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            height: 100vh;
+        }
+        img {
+            position: relative;
+            top: 20px;
+            opacity: 0;
+            transition: 2s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>이미지1</h2>
+        <img src="/test/images/work1.jpg" alt="이미지1" class="img1">
+    </div>
+    <div>
+        <h2>이미지2</h2>
+        <img src="/test/images/work2.jpg" alt="이미지1" class="img2">
+    </div>
+    <div>
+        <h2>이미지3</h2>
+        <img src="/test/images/work3.jpg" alt="이미지1" class="img3">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+        let sTop = $(this).scrollTop();
+        console.log(sTop);
+        
+        if (sTop >= 10) {
+            $('.img1').css({opacity: 1, top: 0});
+        } 
+        if (sTop >= 900) {
+            $('.img2').css({opacity: 1, top: 0});
+        } 
+        if (sTop >= 1500) {
+            $('.img3').css({opacity: 1, top: 0});
+        }
+    });
+    </script>
+</body>
+</html>
