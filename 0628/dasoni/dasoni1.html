@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        #mainImg {
+            width: 100%;
+            height: 820px;
+            position: relative;
+        }
+        .main li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .main li:first-of-type {
+            opacity: 1;
+            z-index: 1;
+            animation: fade1 9s infinite;
+        }
+        .main li:nth-of-type(2) {
+            animation: fade2 9s infinite;
+        }
+        .main li:last-of-type {
+            animation: fade3 9s infinite;
+        }
+        @keyframes fade1 {
+            0% {opacity: 0; z-index: 1;}
+            33% {opacity: 1; z-index: 1;}
+            66% {opacity: 1; z-index: 0;}
+            99% {opacity: 0; z-index: 0;}
+            100% {opacity: 0; z-index: 0;}
+        }
+        @keyframes fade2 {
+            0% {opacity: 0; z-index: 0;}
+            33% {opacity: 0; z-index: 1;}
+            66% {opacity: 1; z-index: 1;}
+            99% {opacity: 1; z-index: 0;}
+            100% {opacity: 0; z-index: 0;}
+        }
+        @keyframes fade3 {
+            0% {opacity: 1; z-index: 0;}
+            33% {opacity: 0; z-index: 0;}
+            66% {opacity: 0; z-index: 1;}
+            99% {opacity: 1; z-index: 1;}
+            100% {opacity: 1; z-index: 0;}
+        }
+        .textbox {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 999;
+        }
+        .sliderText {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .txt_box {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: -80px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+            
+        .text1 h2 {
+            font-size: 40px;
+        }
+        .text1 > p {
+            margin-bottom: 8px;
+        }
+        .text1 > p:last-of-type {
+            margin-top: 32px;
+        }
+        
+        .text2 h2 {
+            font-size: 40px;
+        }
+        .text2 > p {
+            margin-bottom: 8px;
+        }
+        .text2 > p:last-of-type {
+            margin-top: 32px;
+        }
+        .text1 {
+            opacity: 1;
+            animation: slideUp 3s;
+        }
+        @keyframes {
+            
+        }
+        .text2 {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+        <div id="mainImg">
+            <ul class="main">
+                <li><img src="images/main_visual.jpg" alt="main_visual"></li>
+                <li><img src="images/main_visual2.jpg" alt="main_visual2"></li>
+                <li><img src="images/main_visual3.jpg" alt="main_visual3"></li>
+            </ul>
+            <div class="textbox">
+                <img src="images/main_txt_box.png" alt="main_txt_box">
+                <ul class="sliderText">
+                    <li>
+                        <div class="txt_box text1">
+                            <p>언택트시대 필수 과정</p>
+                            <h2>비대면 상담<br>비대면검사</h2>
+                            <p>
+                                이제 당신의 공간에서 전문상담사를 만나보세요
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt_box text2">
+                            <p>가격부담 Down x 치료기대효과 Up</p>
+                            <h2>다소니관계테라피</h2>
+                            <p>검사와 상담이 모두 필요한 여러분에게 딱!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+</body>
+</html>

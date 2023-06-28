@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        
+        .main{
+            position: relative;
+            left: 0;
+            top: 0;
+            display: flex;
+            width: 400%;
+            animation: move 9s infinite;
+        }
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            3% {
+                left: 0;
+            }
+            36% {
+                left: -100%;
+            }
+            39% {
+                left: -100%;
+            }
+            72% {
+                left: -200%;
+            }
+            75% {
+                left: -200%;
+            }
+            99.9999% {
+                left: -300%;
+            }
+            100%{
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li><img src="images/main_visual.jpg" alt=""></li>
+        <li><img src="images/main_visual2.jpg" alt=""></li>
+        <li><img src="images/main_visual3.jpg" alt=""></li>
+        <li><img src="images/main_visual.jpg" alt=""></li>
+    </ul>
+</body>
+</html>
