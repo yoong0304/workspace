@@ -30,7 +30,7 @@
     /* samchully logo */
     #logo {
         position: absolute;
-        left: 20%;
+        left: 24%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -43,15 +43,25 @@
     /* top navigation */
     .tNav {
         position: absolute;
-        right: 30%;
-        background: #000;
+        top: 10px;
+        right: 37%;
         display: flex;
+    }
+    .tNav li:not(li:last-of-type)::after {
+            content: '|';
+            margin: 0 8px;
+            color: #000;
+    }
+    .tNav li a {
+        font-size: 13px;
     }
     /* bottom navigation */
     /* 1depth */
     .bNav {
         position: absolute;
+        left: 33%;
         top: 50%;
+        
         display: flex;
     }
     .bNav > li {
@@ -66,9 +76,21 @@
         font-weight: bolder;
     }
 
-    .bNav > li > a:nth-of-type(6) {
-        color: red;
+    .bNav > li:nth-of-type(6) > a,
+    .bNav > li:nth-of-type(7) > a,
+    .bNav > li:nth-of-type(8) > a
+    {
+        color: rgb(0, 124, 188);
     }
+    .bNav > li:nth-of-type(6)::before {
+        content: '|';
+    }
+    .youtubeIcon img,
+    .togetherIcon img
+    {
+        width: 30px;
+    }
+    
     
     /* 2depth */
     .secondNav {
@@ -76,17 +98,59 @@
         position: absolute;
         display: none;
         background: #fff;
+        border: 1px solid #b6b6b6;
+    }
+    .secondNav li {
+        margin: 8px 16px;
     }
 
     /* hover */
-    .bNav > li:hover {
-        border-bottom: 4px solid blue;
+    .bNav > li:not(li:nth-of-type(9),li:nth-of-type(10)):hover {
+        border-bottom: 4px solid rgb(0, 124, 188);
     }
     .bNav > li:hover > ul {
         display: block;
     }
 
+    /* section */
+    #mainSection {
+        position: relative;
+    }
+    #mainSection h2 {
+        position: absolute;
+        top: 13%;
+        left: 26%;
+        font-size: 2.6rem;
+    }
+    #mainSection .quickLinkBox {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        width: 980px;
+        height: 80px;
+        background-color: #00000070;
     
+    }
+    #mainSection .quickLinkBox ul {
+        display: flex;
+        justify-content: left;
+        line-height: 80px;
+    }
+    #mainSection .quickLinkBox ul li a {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    #mainSection .quickLinkBox .rightQuick {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
+    }
+    #mainSection .quickLinkBox p {
+        display: inline-block;
+    }
 </style>
 <body>
     <!-- header -->
@@ -184,6 +248,20 @@
 
     <section id="mainSection" class="section section1">
         <img src="images/mainImg.jpg" alt="mainImg">
+        <h2>신뢰와 나눔 속에<br>사랑 받는 기업으로</h2>
+        <div class="quickLinkBox">
+            <ul>
+                <li><a href="#"><img src="images/quickIcon1.png" alt="quickIcon1">요금조회</a></li>
+                <li><a href="#"><img src="images/quickIcon2.png" alt="quickIcon2">요금납부</a></li>
+                <li><a href="#"><img src="images/quickIcon3.png" alt="quickIcon3">전출입신청</a></li>
+                <li><a href="#"><img src="images/quickIcon4.png" alt="quickIcon4">신청서양식</a></li>
+            </ul>
+            <div class="rightQuick">
+                <p>간편요금조회</p>
+                <input type="text" placeholder="납부자번호 입력">
+                <input type="submit">
+            </div>
+        </div>
     </section>
     <section class="section section2">
 
