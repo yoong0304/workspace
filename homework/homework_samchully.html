@@ -9,6 +9,7 @@
     <script>
         $(function () {
             let num = 0;
+            let open = 0;
             $('.newscenterBtn > a').click(function (e) {
                 e.preventDefault();
                 let idx = $(this).index();
@@ -31,6 +32,18 @@
                     $(this).find('img').attr("src", "images/gallery_btn2.gif");
                 }
             });
+
+            // family site
+            $('.select1').click(function(){
+                if (open == 0) {
+                    $('.fSite').css({display: 'block'});
+                    open = 1;
+                } else {
+                    $('.fSite').css({display: 'none'});
+                    open = 0;
+                }
+            })
+            
         })
     </script>
 </head>
@@ -140,7 +153,7 @@
         margin: 0 8px;
         padding-bottom: 22px;
         height: 100%;
-
+        cursor: pointer;
     }
 
     .bNav>li>a {
@@ -179,12 +192,16 @@
     }
 
     .secondNav li {
+        /* width: 200px; */
         padding: 8px 50px 8px 16px;
+    }
+    .bNav > li:last-of-type {
+        width: 190px;
     }
 
     .secondNav li a {
         font-size: 14px;
-        font-weight: lighter;
+        font-weight: normal;
     }
 
     .secondNav li.line {
@@ -204,6 +221,9 @@
     .bNav>li:hover>ul {
         display: block;
         z-index: 999;
+    }
+    .bNav > li:hover > a {
+        color: rgb(0, 124, 188);
     }
 
     /* section */
@@ -546,12 +566,15 @@
         top: 40px;
         right: 0;
     }
-    .section3 .slideBox .gallery:hover .gallerycontents > a span {
+
+    .section3 .slideBox .gallery:hover .gallerycontents>a span {
         color: #0697E1;
     }
+
     .section3 .slideBox a:hover {
         color: #0697E1;
     }
+
     /* section4 */
     .section4 .main_etcLink {
         display: flex;
@@ -630,27 +653,27 @@
         margin: 0 auto;
     }
 
-    .footer ul {
+    .footer .inbox > ul {
         display: flex;
         padding: 27px 0 0 150px;
     }
 
-    .footer ul li {
+    .footer .inbox > ul li {
         height: 33px;
     }
 
-    .footer ul li a {
+    .footer .inbox > ul li a {
         color: #aaa;
         font-size: 14px;
     }
 
-    .footer ul li:not(li:last-of-type)::after {
+    .footer .inbox > ul li:not(li:last-of-type)::after {
         content: "|";
         color: #aaa;
         padding: 0 10px;
     }
 
-    .footer ul li a:hover {
+    .footer .inbox>ul li a:hover {
         color: #fff;
     }
 
@@ -681,55 +704,55 @@
         width: 138px;
     }
 
+    /* 패밀리사이트 */
     .footer .fs {
         width: 182px;
         height: 30px;
         background: #fff;
-        color: #000;
-        font-weight: lighter;
         line-height: 30px;
         position: absolute;
         top: 25px;
         right: 500px;
         cursor: pointer;
+        padding: 0px 8px;
     }
-
     .footer .fs span {
-        margin-left: 10px;
+        color: #000;
     }
-
-    .footer .fs .select1 {
-        position: relative;
-        left: 60px;
-    }
-
-    .footer .fs .select2 {
-        position: relative;
-        left: 70px;
-    }
-
-    .footer .fs ul {
+    .footer .fs .fSite {
         display: none;
         position: absolute;
         left: 0;
-        bottom: 50px;
-        width: 100%;
-        background: #494949;
-        border: 1px solid #676767;
-        border-bottom: none;
-        padding: 15px 40px;
+        top: -150px;
+        /* top: 0px; */
+        width: 182px;
+        height: 150px;
+        background: #fff;
+        overflow-y:scroll;
     }
-
-    .footer .fs ul a {
-        color: #b9b9b9;
-        line-height: 2;
+    .footer .fs .fSite li {
+        padding: 4px 8px;
+    }
+    .footer .fs .select1 {
+        position: absolute;
+        left: 154px;
+        top: 0;
+    }
+    .footer .fs .select2 {
+        position: absolute;
+        left: 190px;
+        top: 0;
     }
 </style>
 
 <body>
     <!-- header -->
     <header>
-        <h1 id="logo"><img src="images/samchully.gif" alt="samchullyLogo"></h1>
+        <a href="#">
+            <h1 id="logo">
+                <img src="images/samchully.gif" alt="samchullyLogo">
+            </h1>
+        </a>
         <!-- global navigation -->
         <nav id="gnb">
             <!-- top navigation -->
@@ -1121,10 +1144,16 @@
             </div>
             <div class="fs">
                 <span>Family Site</span>
-                <ul>
-                    <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
-                    <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
-                    <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+                <ul class="fSite">
+                    <li><a href="#">Family Site</a></li>
+                    <li><a href="#">(주)ST International</a></li>
+                    <li><a href="#">(주)삼천리 ENG</a></li>
+                    <li><a href="#">(주)삼천리 ES</a></li>
+                    <li><a href="#">(주)HUCES</a></li>
+                    <li><a href="#">SL&amp;C</a></li>
+                    <li><a href="#">삼천리자산운용(주)</a></li>
+                    <li><a href="#">(주)삼천리모터스</a></li>
+                    <li><a href="#">천만장학회</a></li>
                 </ul>
                 <img src="images/arrow_select.gif" alt="arrow_select" class="select1">
                 <img src="images/select_img.gif" alt="select_img" class="select2">
