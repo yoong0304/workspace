@@ -192,7 +192,6 @@
     }
 
     .secondNav li {
-        /* width: 200px; */
         padding: 8px 50px 8px 16px;
     }
     .bNav > li:last-of-type {
@@ -206,14 +205,17 @@
 
     .secondNav li.line {
         background: url(images/bg_line_1.gif) no-repeat center;
-        /* padding-top: 10px; */
+        cursor: default;
     }
-
-    .secondNav li:hover {
+    
+    /* hover */
+    .secondNav li:not(.line):hover {
         background: rgb(0, 124, 188);
     }
-
-    /* hover */
+    .secondNav li:hover a {
+        color: #fff;
+    }
+    
     .bNav>li:not(li:nth-of-type(9), li:nth-of-type(10)):hover {
         border-bottom: 4px solid rgb(0, 124, 188);
     }
