@@ -20,5 +20,6 @@ public class Ex7_1 {
                 run = false;
             }
         }
+        scanner.close();
     }
 }

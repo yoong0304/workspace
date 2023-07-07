@@ -40,6 +40,7 @@ public class Ex7_2 {
             m += 60;
         }
         System.out.println("창영이 방식의 알람 시간은" + h + "시" + m + "분 이다.");
+        scanner.close();
     }
 
 }

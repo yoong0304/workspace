@@ -57,5 +57,6 @@ public class Ex6_6_3 {
             }
         }
         System.out.println("프로그램 종료");
+        scanner.close();
     }
 }

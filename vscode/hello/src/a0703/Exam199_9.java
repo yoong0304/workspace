@@ -69,6 +69,7 @@ public class Exam199_9 {
                 System.out.println("프로그램을 종료합니다. 감사합니다.");
                 break;
             }
+            sc.close();
         }
     }
 }

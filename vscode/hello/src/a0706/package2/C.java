@@ -1,5 +1,5 @@
 package a0706.package2;
-import a0706.package1.A;
+// import a0706.package1.A;
 public class C {
     public void method() {
         // A a = new A();  // X
