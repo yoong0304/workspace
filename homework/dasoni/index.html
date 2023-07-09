@@ -21,7 +21,6 @@
             list-style: none;
             cursor: pointer;
         }
-
         img {
             vertical-align: top;
         }
@@ -53,6 +52,9 @@
             transform: translate(-50%, -50%);
         }
 
+        #gnb {
+            overflow: hidden;
+        }
         /* onedepth */
         .onedepth {
             width: 100%;
@@ -67,13 +69,15 @@
             height: 51px;
             line-height: 15px;
             padding: 16px 24px;
-            background: lightblue;
             font-weight: bolder;
         }
 
         /* twodepth */
         .twodepth {
+            position: relative;
             text-align: center;
+            display: none;
+            transition: 1s;
         }
 
         .twodepth>li {
@@ -90,16 +94,24 @@
             z-index: -1;
             top: 110px;
             width: 100%;
-            background: lightgrey;
-            height: 40%;
+            background: #aaa;
+            height: 0%;
+            opacity: 0;
+            transition: .3s;
         }
         /* hover */
         .twodepth > li > a:hover {
             font-weight: bolder;
             background: url(images/menu_hover.png) no-repeat 10px;
         }
-
-
+        #gnb:hover .twodepth {
+            top: 0;
+            display: block;
+        }
+        #gnb:hover .bg {
+            height: 40%;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -115,6 +127,7 @@
             </div>
         </div>
         <nav id="gnb">
+            <div class="bg"></div>
             <ul class="onedepth">
                 <li>
                     <a href="#">ABOUT 다소니</a>
@@ -163,7 +176,6 @@
                 </li>
             </ul>
         </nav>
-        <div class="bg"></div>
     </header>
 </body>
 
