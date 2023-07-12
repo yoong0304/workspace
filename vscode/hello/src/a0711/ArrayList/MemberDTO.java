@@ -38,6 +38,7 @@ public class MemberDTO {
     public void setAddress(String address) {
         this.address = address;
     }
+    
     // 기본생성자
     public MemberDTO() {
     }
@@ -48,6 +49,7 @@ public class MemberDTO {
         this.age = age;
         this.address = address;
     }
+
     // toString
     public String toString() {
         return " " + id + "\t" + name + "\t" + age + "\t" + address;
